@@ -1,0 +1,23 @@
+# Site settings
+title: TinyBlog
+email: maple91@foxmail.com
+copyright_name: TinyBlog-jekyll
+description: "CodingCrush's blog "
+baseurl: "/startbootstrap-clean-blog-jekyll"
+url: "http://yourdomain.com"
+github_username: CodingCrush
+weibo_id: 2303345023
+email_username: maple91@foxmail.com
+
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
