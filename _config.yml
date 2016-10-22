@@ -3,8 +3,8 @@ title: TinyBlog
 email: maple91@foxmail.com
 copyright_name: TinyBlog-jekyll
 description: "CodingCrush's blog "
-baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "http://yourdomain.com"
+baseurl: "/_site"
+url: "https://codingcrush.github.io/"
 github_username: CodingCrush
 weibo_id: 2303345023
 email_username: maple91@foxmail.com
