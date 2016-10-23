@@ -1,13 +1,15 @@
 # Site settings
-title: TinyBlog
+title: TinyBlog-jekyll
 email: maple91@foxmail.com
 copyright_name: TinyBlog-jekyll
 description: "CodingCrush's blog "
-baseurl: "/_site"
-url: "https://codingcrush.github.io/"
+baseurl: ""
+prefix_url: "codingcrush.me"
+url: "codingcrush.me"
 github_username: CodingCrush
 weibo_id: 2303345023
 email_username: maple91@foxmail.com
+disqus_shortname: codingcrush
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID

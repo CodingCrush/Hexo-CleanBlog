@@ -2,7 +2,7 @@
 layout:     post
 title:      "TinyBlog template test"
 tags:       "jekyll test tinyblog"
-date:       2014-06-10 12:00:00
+date:       2016-10-20 11:00:00
 author:     "CodingCrush"
 ---
 
