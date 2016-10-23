@@ -1,6 +1,6 @@
 #TinyBlog-Jekyll
 The blog is based on Clean-Blog theme [Start Bootstrap](http://startbootstrap.com/).
-You can access my blog on [TinyBlog-Jekyll](codingcrush.me)
+You can access my blog on [TinyBlog-Jekyll](http:/codingcrush.me)
 
 ###[View Live Demo &rarr;](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
 
