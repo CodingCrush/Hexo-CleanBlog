@@ -16,9 +16,11 @@ layout: page
                 </ul>
             {% endif %}
 
-    <p class="post-meta">Posted by
+    <p class="post-meta">
+        <a style="color:#808080">Posted by</a>
         <a style="color:#a6a0ff">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</a>
-            on {{ post.date | date: "%B %-d, %Y" }}</p>
+        <a style="color:#808080">on {{ post.date | date: "%B %-d, %Y" }}</a>
+    </p>
 </div>
 <hr>
 {% endfor %}
