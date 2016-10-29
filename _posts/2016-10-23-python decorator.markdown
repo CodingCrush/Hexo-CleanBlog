@@ -9,7 +9,7 @@ author:     "CodingCrush"
 ## 使用@wraps装饰器
 
 在Python的使用中，常见到wraps装饰器的出现，由于对其作用不太明白，便通过阅读源代码进行深入了解。
-   
+  
     def email_check(email_address):
         def decorator(f):
             @wraps(f)
