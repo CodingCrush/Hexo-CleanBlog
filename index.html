@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-
+<title>Blog-CodingCrush</title>
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -15,6 +15,7 @@ layout: page
                 {% endfor %}
                 </ul>
             {% endif %}
+
 
     <p class="post-meta">
         <a style="color:#777">Posted by</a>

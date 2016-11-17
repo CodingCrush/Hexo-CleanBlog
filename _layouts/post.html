@@ -5,24 +5,28 @@ layout: default
 
 <!-- Post Header -->
 <header>
+    <title>{{ page.title }}</title>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <h1>{{ page.title }}</h1>
 
-                    {% if post.tags %}
+                    {% if page.tags %}
                     <ul class="list-unstyled list-inline">
-                    {% for tag in post.tags %}
+                    {% for tag in page.tags %}
                         <li><strong><span class="label label-info">{{ tag }}</span></strong></li>
                     {% endfor %}
                     </ul>
                     {% endif %}
 
-                    <span class="meta">Posted by
-                        <a style="color:#a6a0ff">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
-                            </a>
-                        on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <div class="post-preview">
+                        <p class="post-meta">Posted by
+                            <a style="color:#a6a0ff">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
+                                </a>
+                            on {{ page.date | date: "%B %-d, %Y" }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
