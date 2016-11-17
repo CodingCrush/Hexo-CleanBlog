@@ -14,7 +14,7 @@ isArchive: true
             <div class="main-article-contant">
 
                 {% capture post_year1 %}{{ 'now' | date: '%Y' }}{% endcapture %}
-                <h3>{{ post_year1 }}</h3>
+                <h3><a style ="color:#777">{{ post_year1 }}</a></h3>
                 <ul class="article-year fn-clear">
                     {% for post in site.posts %}
                         {% capture post_year2 %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -24,7 +24,7 @@ isArchive: true
                 <h3>{{ post_year1 }}</h3>
                 <ul class="article-year fn-clear">
                         {% endif %}
-                    <li>
+                    <li style ="color:#777">
                         <span><a style ="color:#777">{{ post.date | date_to_utc | date: '%Y-%m-%d' }}</a></span>
 
                         <a href="{{site.url}}{{ post.url }}" style="color:#a6a0ff">{{ post.title }}

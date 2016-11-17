@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "选择编程，追随梦想"
-tags:       "转行 码农 IT"
+title:      选择编程，追随梦想
+tags:       [转行,码农,IT]
 date:       2016-10-24 11:00:00
 author:     "CodingCrush"
 ---

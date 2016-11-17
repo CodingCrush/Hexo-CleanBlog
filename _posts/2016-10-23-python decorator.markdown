@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Python wraps装饰器的使用"
-tags:       "Python wraps functools decorator"
+title:      Python wraps装饰器的使用
+tags:       [Python,wraps,functools,decorator]
 date:       2016-10-23 8:00:00
 author:     "CodingCrush"
 ---

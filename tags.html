@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<title>Tags-CodingCrush</title>
+
+<body>
+  <div class="container">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <div class="tags-expo">
+        <div class="tags-expo-list">
+          {% for tag in site.tags %}
+          <a href="#{{ tag[0] | slugify }}" class="post-tag">
+            <h3><span class="label label-info">{{ tag[0] }}</span></h3>
+          </a>
+          {% endfor %}
+        </div>
+        <hr/>
+        <div class="tags-expo-section">
+          {% for tag in site.tags %}
+          <h2 id="{{ tag[0] | slugify }}"><a style ="color:#777">{{ tag[0] }}</a></h2>
+          <ul class="tags-expo-posts" >
+            {% for post in tag[1] %}
+              <a class="post-title"  href="{{ site.baseurl }}{{ post.url }}"></a>
+
+            <li style ="color:#777">
+                  <a style="color:#a6a0ff">{{ post.title }}</a>
+                <a style ="color:#777">
+                  <small class="post-date">
+                    {{ post.date | date_to_string }}
+                  </small>
+                  <a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </div>
+  </div>
+  </div>
+  </body>

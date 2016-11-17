@@ -6,7 +6,11 @@ layout: default
 <!-- Post Header -->
 <header>
     <title>{{ page.title }}</title>
-    <div class="container">
+
+</header>
+
+<!-- Post Content -->
+<div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
@@ -30,17 +34,14 @@ layout: default
                 </div>
             </div>
         </div>
-    </div>
-</header>
+</div>
 
-<!-- Post Content -->
 <article>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
+            <hr>
 				{{ content }}
-
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -54,7 +55,6 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
-
             {% if site.disqus_shortname %}
                 <!-- Add Disqus comments. -->
                 <div id="disqus_thread"></div>
@@ -80,7 +80,5 @@ layout: default
         </div>
     </div>
 </article>
-
-
 
 <hr>
