@@ -19,18 +19,24 @@ layout: default
                     {% if page.tags %}
                     <ul class="list-unstyled list-inline">
                     {% for tag in page.tags %}
-                        <li><strong><span class="label label-info">{{ tag }}</span></strong></li>
+                        <li><span class="label label-info">{{ tag }}</span></li>
                     {% endfor %}
                     </ul>
                     {% endif %}
 
                     <div class="post-preview">
                         <p class="post-meta">Posted by
-                            <a style="color:#a6a0ff">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
-                                </a>
+                            <a style="color:#1BB3E9">
+                                {% if page.author %}
+                                {{ page.author }}
+                                {% else %}
+                                {{ site.title }}
+                                {% endif %}
+                            </a>
                             on {{ page.date | date: "%B %-d, %Y" }}
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -55,13 +61,14 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
+                <hr>
+
             {% if site.disqus_shortname %}
-                <!-- Add Disqus comments. -->
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
                   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                   var disqus_shortname = '{{ site.disqus_shortname }}'; // required: replace example with your forum shortname
-                  var disqus_identifier = '{{site.prefix_url}}{{ page.url }}';
+                  var disqus_identifier = '{{site.url}}/{{ page.url }}';
 
                   /* * * DON'T EDIT BELOW THIS LINE * * */
                   (function() {
@@ -73,6 +80,21 @@ layout: default
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
                 </div>
+            {% endif %}
+
+             {% if site.duoshuo_shortname %}
+                    <div class="ds-thread" data-thread-key={{site.url}}{{ page.url }} data-title={{ page.title }} data-url={{site.url}}{{ page.url }}></div>
+                <script type="text/javascript">
+                var duoshuoQuery = {short_name:'codingcrush'};
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';ds.async = true;
+                        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0]
+                         || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                    </script>
             {% endif %}
 
 

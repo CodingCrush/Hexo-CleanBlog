@@ -2,14 +2,14 @@
 layout: default
 isArchive: true
 ---
-<title>Archives-CodingCrush</title>
+<title>Archives-{{ site.title }}</title>
 <div class="container">
 <div class="row">
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <article class="main-article main-article-page">
-        <div class="violet-title">
-            <h3 class="violet-title-item">All posts is here.<span>({{ site.posts | size }} posts.)</span></h3>
-        </div>
+
+        <h2>All {{ site.posts | size }} Posts is here.</h2>
+        <hr>
         <div class="violet-post">
             <div class="main-article-contant">
 
@@ -27,13 +27,15 @@ isArchive: true
                     <li style ="color:#777">
                         <span><a style ="color:#777">{{ post.date | date_to_utc | date: '%Y-%m-%d' }}</a></span>
 
-                        <a href="{{site.url}}{{ post.url }}" style="color:#a6a0ff">{{ post.title }}
+                        <a href="{{ post.url | prepend: site.baseurl }}" style="color:#a6a0ff">{{ post.title }}
                         </a>
                     </li>
                     {% endfor %}
                 </ul>
+
             </div>
         </div>
+        <hr>
     </article>
     </div>
     </div>

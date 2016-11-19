@@ -24,9 +24,9 @@
                     </li>
                     {% endif %}
 
-                    {% if site.github_username %}
+                    {% if site.github_repository %}
                     <li>
-                        <a href="https://github.com/{{ site.github_username }}">
+                        <a href="https://github.com/CodingCrush/{{ site.github_repository }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -34,9 +34,21 @@
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.email_username %}
+
+                    {% if site.zhihu_username %}
                     <li>
-                        <a href="mailto:{{ site.email_username }}">
+                        <a href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    {% if site.email %}
+                    <li>
+                        <a href="mailto:{{ site.email }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
@@ -44,6 +56,7 @@
                         </a>
                     </li>
                     {% endif %}
+
                 </ul>
                 <p class="copyright text-muted">Copyright &copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }}</p>
             </div>

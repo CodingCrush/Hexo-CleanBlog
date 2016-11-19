@@ -2,14 +2,15 @@
 title: CodingCrush
 email: codingcrush@163.com
 copyright_name: TinyBlog-jekyll
-description: "CodingCrush's blog "
+description: CodingCrush's blog
 baseurl: ""
-prefix_url: "codingcrush.me"
-url: "codingcrush.me"
+url: "http://codingcrush.me"
 github_username: CodingCrush
+zhihu_username :
 weibo_id: 2303345023
-email_username: maple91@foxmail.com
-disqus_shortname: codingcrush
+disqus_shortname:
+duoshuo_shortname: codingcrush
+github_repository: TinyBlog-jekyll
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
@@ -19,7 +20,8 @@ disqus_shortname: codingcrush
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 5
+paginate: 8
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed]
+timezone: Asia/Shanghai
