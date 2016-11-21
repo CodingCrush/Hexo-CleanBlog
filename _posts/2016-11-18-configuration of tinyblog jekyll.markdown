@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      配置TinyBlog-jekyll搭建GitHub静态博客
-tags:       [jekyll,github,前端]
-date:       2016-11-19 0:00:00
+tags:       [Jekyll,GitHub,FrontEnd]
+date:       2016-11-18 12:00:00
 author:     "CodingCrush"
 ---
 

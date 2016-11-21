@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      浅析Python正则表达式中的转义
-tags:       [Python,RE]
+tags:       [Python,RE,Syntax]
 date:       2016-10-29 8:00:00
 author:     "CodingCrush"
 ---

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Python functools库中wraps装饰器的作用
-tags:       [Python,functools,decorator]
+tags:       [Python,Library,Syntax]
 date:       2016-10-23 8:00:00
 author:     "CodingCrush"
 ---

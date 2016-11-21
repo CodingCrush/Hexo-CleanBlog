@@ -1,17 +1,18 @@
 ---
 layout: page
 ---
-<title>Blog-CodingCrush</title>
+<title>Blog-{{site.title}}</title>
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
+        <h2 class="post-title">{{ post.title }}</h2>
 
             {% if post.tags %}
                 <ul class="list-unstyled list-inline">
                 {% for tag in post.tags %}
-                    <li><span class="label label-info">{{ tag }}</span></li>
+                <li><span class="label label-info">
+                    {{ tag }}
+                </span></li>
                 {% endfor %}
                 </ul>
             {% endif %}
