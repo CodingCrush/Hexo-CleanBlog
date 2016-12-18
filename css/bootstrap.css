@@ -4861,7 +4861,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
  vertical-align: baseline;
  border-radius: 0.25em;
  border: 1.5px solid #1BB3E9;
- text-transform: uppercase;
 }
 a.label:hover,
 a.label:focus {

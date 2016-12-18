@@ -20,7 +20,7 @@ github_repository: TinyBlog-jekyll
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 8
+paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed]
