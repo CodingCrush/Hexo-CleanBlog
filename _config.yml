@@ -1,15 +1,15 @@
 # Site settings
-title: CodingCrush
-email: codingcrush@163.com
+title: admin
+email: admin@163.com
 copyright_name: TinyBlog-jekyll
-description: CodingCrush's blog
+description: admin's blog
 baseurl: ""
-url: "http://codingcrush.me"
-github_username: CodingCrush
+url: "http://admin.me"
+github_username: admin
 zhihu_username :
-weibo_id: 2303345023
+weibo_id: 
 disqus_shortname:
-duoshuo_shortname: codingcrush
+duoshuo_shortname: admin
 github_repository: TinyBlog-jekyll
 
 # Google Analytics

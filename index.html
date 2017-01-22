@@ -17,12 +17,16 @@ layout: page
                 </ul>
             {% endif %}
 
+            <div class="entry">
+            {{ post.excerpt }}
+            </div>
 
-    <p class="post-meta">
-        <a style="color:#777">Posted by</a>
-        <a style="color:#a6a0ff">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</a>
-        <a style="color:#777">on {{ post.date | date: "%B %-d, %Y" }}</a>
-    </p>
+        <p class="post-meta">
+            <a style="color:#777">Posted by</a>
+            <a style="color:#a6a0ff">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</a>
+            <a style="color:#777">on {{ post.date | date: "%B %-d, %Y" }}</a>
+        </p>
+
 </div>
 <hr>
 {% endfor %}

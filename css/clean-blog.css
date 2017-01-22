@@ -14,6 +14,12 @@ p {
     margin: 1.7rem 0;
     font-size: 1.7rem;
 }
+
+li {
+    line-height: 1.7;
+    font-size: 1.7rem;
+    color: #333;}
+
 p a {
   text-decoration: underline;
 
@@ -225,6 +231,11 @@ hr.small {
   font-size: 30px;
   margin-top: 10px;
   margin-bottom: 5px;
+  color: #404040;
+}
+.post-preview > a > .post-title:hover,
+.post-preview > a > .post-title:focus {
+  color: #0085a1;
 }
 .post-preview > a > .post-subtitle {
   margin: 0;
@@ -236,6 +247,7 @@ hr.small {
   font-size: 15px;
   font-style: italic;
   margin-top: 0;
+  direction:rtl;
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
@@ -244,7 +256,6 @@ hr.small {
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
   color: #0085a1;
-  text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
@@ -403,9 +414,7 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
-.main-container{
-  margin-top: 60px;
-}
+
 
 .post-tag {
   display: inline-block;
@@ -470,4 +479,3 @@ body {
     font-family: $font-sans;
   }
 }
-

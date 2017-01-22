@@ -6,7 +6,6 @@ layout: default
 <!-- Post Header -->
 <header>
     <title>{{ page.title }}</title>
-
 </header>
 
 <!-- Post Content -->
@@ -25,6 +24,10 @@ layout: default
                     {% endfor %}
                     </ul>
                     {% endif %}
+
+                    <div class="entry">
+                    {{ content }}
+                    </div>
 
                     <div class="post-preview">
                         <p class="post-meta">Posted by
