@@ -10,9 +10,11 @@ layout: page
             {% if post.tags %}
                 <ul class="list-unstyled list-inline">
                 {% for tag in post.tags %}
-                <li><span class="label label-info">
+                <li>
+                    <a href="{{ site.url }}/tags/#{{ tag | slugify }}" class="label label-info">
                     {{ tag }}
-                </span></li>
+                    </a>
+                </li>
                 {% endfor %}
                 </ul>
             {% endif %}

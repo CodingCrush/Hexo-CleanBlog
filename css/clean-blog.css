@@ -418,12 +418,10 @@ body {
 
 .post-tag {
   display: inline-block;
-  background: rgba($theme-color, 0.15);
   margin-right: .5rem;
   border-radius: 4px;
   color: #a6a0ff;
-  font-family: $font-sans;
-  font-size: 90%;
+  font-size: 100%;
   &:before {
     content: "\f02b";
     font-family: $font-font-awesome;

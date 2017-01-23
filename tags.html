@@ -2,48 +2,40 @@
 layout: default
 ---
 <title>Tags-{{ site.title }}</title>
-
 <body>
-  <div class="container">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <h2>All {{ site.tags | size }} Tags is here.</h2>
-      <hr>
-
-      <div class="tags-expo">
-        <div class="tags-expo-list">
-          {% for tag in site.tags %}
-
-          <a href="#{{ tag[0] | slugify }}" class="post-tag">
-            <h3><span class="label label-info">{{ tag[0] }}</span></h3>
-          </a>
-
-          {% endfor %}
-        </div>
-        <hr/>
-        <div class="tags-expo-section">
-          {% for tag in site.tags %}
-          <h2 id="{{ tag[0] | slugify }}"><a style ="color:#777">{{ tag[0] }}</a></h2>
-          <ul class="tags-expo-posts" >
-
-            {% for post in tag[1] %}
-            <li style ="color:#1BB3E9">
-                  <a class="post-title"  href="{{ post.url | prepend: site.baseurl }}" style="color:#1BB3E9">
-                    {{ post.title }}
-                  </a>
-
-                  <a style ="color:#777" class="pull-right">
-                  <small class="post-date"  >
-                    ---Posted on {{ post.date | date_to_string }}
-                  </small>
-                  <a>
-            </li>
+<div class="container">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h2>All {{ site.tags | size }} Tags is here.</h2>
+        <hr>
+        <ul class="list-unstyled list-inline">
+            {% for tag in site.tags %}
+                <a href="#{{ tag[0] | slugify }}" class="label label-info">
+                {{ tag[0] }}
+                </a>
             {% endfor %}
+        </ul>
+        <hr/>
+        {% for tag in site.tags %}
+            <i class = "icon-tags" id="{{ tag[0] | slugify }}"></i>
+            {{ tag[0] }}
 
-          </ul>
-          {% endfor %}
+            <ul class="tags-expo-posts" >
+                {% for post in tag[1] %}
+                <li style ="color:#1BB3E9">
+                    <a class="post-title"  href="{{ post.url | prepend: site.baseurl }}" style="color:#1BB3E9">
+                    {{ post.title }}
+                    </a>
 
-          <hr>
-        </div>
-  </div>
-  </div>
-  </body>
+                    <a style ="color:#777" class="pull-right">
+                    <small class="post-date"  >
+                    ---Posted on {{ post.date | date_to_string }}
+                    </small>
+                    <a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+        <hr>
+    </div>
+</div>
+</body>

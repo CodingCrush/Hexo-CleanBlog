@@ -1150,7 +1150,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #b7b7b7;
 }
 .sr-only {
   position: absolute;
@@ -4866,9 +4866,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 a.label:hover,
 a.label:focus {
-  color: #fff;
+  color: #31b0d5;
   text-decoration: none;
-  cursor: pointer;
 }
 .label:empty {
   display: none;
