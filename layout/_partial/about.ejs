@@ -1,0 +1,44 @@
+<!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+<%
+    var cover = item.cover || theme.index_cover;
+%>
+
+<header class="intro-header">
+    <div class="container">
+    </div>
+</header>
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Gallery -->
+            <% if (item.photos && item.photos.length){ %>
+                <%- partial('gallery') %>
+            <% } %>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <%- item.content %>
+
+                <% if(theme.addthis) { %>
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%- theme.addthis %>"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_sharing_toolbox"></div>
+                <% } %>
+            </div>
+
+            <!-- Comments -->
+            <% if (item.comment != false) { %>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <%- partial("_partial/comments.ejs") %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</article>

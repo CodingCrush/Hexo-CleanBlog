@@ -1,27 +1,43 @@
-# Site settings
-title: admin
-email: admin@163.com
-copyright_name: TinyBlog-jekyll
-description: admin's blog
-baseurl: ""
-url: "http://admin.me"
-github_username: admin
-zhihu_username :
-weibo_id: 
-disqus_shortname:
-duoshuo_shortname: admin
-github_repository: TinyBlog-jekyll
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  GitHub:
+    url: https://github.com/CodingCrush/Hexo-CleanBlog
+  About: /About
 
-# Google Analytics
-# To enable google analytics, uncomment below line with a valid Google Tracking ID
-# google_tracking_id:
+# Title on top left of menu. Leave empty to use main blog title
+menu_title: CodingCrush's Blog
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+# Default post title
+default_post_title: Untitled
 
-gems: [jekyll-paginate, jekyll-feed]
-timezone: Asia/Shanghai
+# Comments. Choose one by filling up the information
+comments:
+  # Disqus comments
+  disqus_shortname: codingcrush
+  # Facebook comments
+  facebook:
+    appid:
+    comment_count: 5
+    comment_colorscheme: light
+
+
+# Google Analytics Tracking ID
+google_analytics:
+
+# Addthis ID
+addthis:
+
+# set your own favicon
+favicon: /img/favicon.ico
+
+# Social Accounts
+twitter_url:
+twitter_handle:
+facebook_url:
+github_url: https://github.com/CodingCrush
+gitlab_url:
+linkedin_url:
+mailto: codingcrush@163.com
+rss: "/atom.xml"

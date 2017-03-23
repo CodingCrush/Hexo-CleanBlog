@@ -1,0 +1,29 @@
+<div class="post-preview">
+    <a href="<%- config.root %><%- item.path %>">
+        <h2 class="post-title">
+            <%- item.title || theme.default_post_title || "Untitled" %>
+        </h2>
+    </a>
+
+    <!-- Tags -->
+    <% if (item.tags && item.tags.length) { %>
+      <% item.tags.each(function(tag){ %>
+          <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag" class="post-tag">
+            <%- tag.name %>
+          </a>
+      <% }); %>
+    <% } %>
+
+    <div class="excerpt typo">
+        <%- item.excerpt || __('no_excerpt') %>
+    </div>
+
+    <p class="post-meta">
+        <!-- Date and Author -->
+        <% if(item.author) { %>
+            Posted by <a style="color:#1BB3E9"> <%- item.author %> </a> on
+        <% } %>
+        <%= item.date.format(config.date_format) %>
+    </p>
+</div>
+<hr>

@@ -1,0 +1,78 @@
+<!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+<%
+    var cover = item.cover || theme.index_cover;
+%>
+
+<header class="intro-header">
+    <div class="container">
+    </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-preview">
+                <!-- Title -->
+                <a href="<%- config.root %><%- item.path %>">
+                    <h2 class="post-title">
+                        <%- item.title || theme.default_post_title || "Untitled" %>
+                    </h2>
+                </a>
+
+                <!-- Tags -->
+                <% if (item.tags && item.tags.length) { %>
+                  <% item.tags.each(function(tag){ %>
+                      <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag" class="post-tag">
+                        <%- tag.name %>
+                      </a>
+                  <% }); %>
+                <% } %>
+
+                <p class="post-meta">
+                    <!-- Date and Author -->
+                    <% if(item.author) { %>
+                        Posted by <a style="color:#1BB3E9"> <%- item.author %> </a> on
+                    <% } %>
+                    <%= item.date.format(config.date_format) %>
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Gallery -->
+            <% if (item.photos && item.photos.length){ %>
+                <%- partial('gallery') %>
+            <% } %>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <%- item.content %>
+
+                <% if(theme.addthis) { %>
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%- theme.addthis %>"></script>
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_sharing_toolbox"></div>
+                <% } %>
+            </div>
+
+            <!-- Comments -->
+            <% if (item.comment != false) { %>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <%- partial("_partial/comments.ejs") %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</article>
