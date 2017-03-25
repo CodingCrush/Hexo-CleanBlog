@@ -23,7 +23,7 @@
 
             <div class="post-preview">
             <!-- Tags -->
-                <h2>All Tags are here:</h2>
+                <h2>All tags are here:</h2>
                 <% site.tags.each(function(tag){ %>
                   <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag" class="post-tag">
                     <%- tag.name %>
@@ -35,8 +35,9 @@
             <% page.posts.each(function(item){ %>
                 <%- partial('_partial/article-archive', {item: item}) %>
             <% }); %>
-            <div class="archive-before-pagination"></div>
-            <%- partial('_partial/pagination') %>
+
+            <hr>
+
         </div>
     </div>
 </div>

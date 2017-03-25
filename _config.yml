@@ -1,13 +1,11 @@
 # Header
 menu:
-  Home: /
   Archives: /archives
+  About: /about
   GitHub:
     url: https://github.com/CodingCrush/Hexo-CleanBlog
-  About: /About
-
 # Title on top left of menu. Leave empty to use main blog title
-menu_title: CodingCrush's Blog
+menu_title: CodingCrush
 
 # Default post title
 default_post_title: Untitled
@@ -24,7 +22,7 @@ comments:
 
 
 # Google Analytics Tracking ID
-google_analytics:
+google_analytics: UA-96094518-1
 
 # Addthis ID
 addthis:

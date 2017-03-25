@@ -9,12 +9,34 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<%- config.root %>"><%- theme.menu_title || config.title || "" %></a>
+            <a class="navbar-brand" href="<%- config.root %>"><%- theme.menu_title %></a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <% if (page.prev){ %>
+                        <li class="previous" title="<%= page.prev.title %>">
+                            <a href="<%- config.root %><%- page.prev.path %>">&larr; <%- __('prev')%></a>
+                        </li>
+                    <% } else { %>
+                        <li class="previous disabled">
+                            <a href="#">&larr;  <%- __('prev')%></a>
+                        </li>
+                    <% } %>
+                </li>
+                <li>
+                    <% if (page.next){ %>
+                        <li class="next" title="<%= page.next.title %>">
+                            <a href="<%- config.root %><%- page.next.path %>"><%- __('next')%>  &rarr;</a>
+                        </li>
+                    <% } else { %>
+                        <li class="next disabled"><a href="#"><%- __('next')%>  &rarr;</a></li>
+                    <% } %>
+                </li>
+
                 <% for (var i in theme.menu){ %>
                     <li>
                         <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">

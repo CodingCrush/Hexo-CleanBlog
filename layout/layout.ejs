@@ -7,7 +7,11 @@
 <body>
 
     <!-- Menu -->
-    <%- partial('_partial/menu') %>
+    <% if (is_post()) { %>
+        <%- partial('_partial/post-menu') %>
+    <% } else { %>
+        <%- partial('_partial/page-menu') %>
+    <% } %>
 
     <!-- Main Content -->
     <%- body %>
