@@ -1,190 +1,127 @@
-# Clean Blog Hexo
+## Hexo-CleanBlog
+Hexo-CleanBlog是花了一天从这个主题[CleanBlog](http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/)修改而来，去除了浪费流量的图片，添加了标签、关于我等功能，以尽可能的保持简约。
 
-![](http://www.codeblocq.com/img/hexo-theme-thumbnail/CleanBlog.png)
-
-Hexo implementation of [Clean Blog](http://blackrockdigital.github.io/startbootstrap-clean-blog/index.html)
-
-Clean blog is a full featured, responsive Hexo theme. [Demo here](http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/).
-
-## Features
-
-- Disqus and Facebook comments
-- Google Analytics
-- Addthis
-- Cover image for posts and pages
-- Tags and Categories Support
-- Responsive Images
-- Image Gallery
-- Code syntax highlighting
-
-## External libraries used
-
-- [Bootstrap](http://getbootstrap.com/css/)
-- [FeatherLight.js](http://noelboss.github.io/featherlight/) (Gallery)
-- [jQuery](https://jquery.com/)
-
-## Installation
-
-```
-$ git clone https://github.com/klugjo/hexo-theme-clean-blog.git themes/clean-blog
+## [hexo安装](https://hexo.io/)
+```bash
+# 安装npm
+sudo apt-get install npm
+# 安装hexo
+npm install hexo-cli -g
+# 安装rss工具
+npm install hexo-generator-feed --save
+# 初始化项目
+hexo init blog
 ```
 
-Then update your blog's main `_config.yml` to set the theme to `clean-blog`:
 
+## GITHUB配置
+1.在GitHub中建立一个仓库，比如说我的GitHub用户名是CodingCrush,我就要建立一个名为codingcrush.github.io的[repository](https://github.com/CodingCrush/CodingCrush.github.io)。
+后台会自动在setting中自动开启GitHub Pages的功能，相当的简单。
+![github_pages](/img/github_pages.jpg)
+以后，更新博客主题与内容的操作都是通过GIT，仓库的操作很方便，如果不会用，可根据[廖雪峰](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)的教程进行学习。
+Settings中还可以绑定到用户的独立域名上，设置好之后，仓库里会自动生成一个[CNAME](https://github.com/CodingCrush/CodingCrush.github.io/blob/master/CNAME)的文件，里面只有一行域名。
+
+```bash
+cd  blog/theme
+git clone https://github.com/CodingCrush/Hexo-CleanBlog
 ```
-# Extensions
-## Plugins: http://hexo.io/plugins/
-## Themes: http://hexo.io/themes/
-theme: clean-blog
+另外，还需要增加About页面：
+```bash
+cd ..
+hexo new page "about“
+```
+##  Hexo-CleanBlog配置
+在blog目录下有一个_config.yml,这里会有几个比较关键的常量：
+```yml
+title: CodingCrush
+description: Powered by Hexo and Hexo-CleanBlog
+author: CodingCrush
+# 时区与语言设置
+language: en
+timezone: Asia/Shanghai
+
+# 切换为原版时间显示格式
+date_format: MMM D, YYYY
+
+# 更换主题
+theme:Hexo-CleanBlog
+
+# 部署: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/CodingCrush/CodingCrush.github.io
+  branch: master
+
+# RSS订阅: http://hexo.io/plugins/
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 10
 ```
 
-## Configuration
-
-### Menu
-
-The menu is configured in the theme's `_config.yml`.
-
-```
-# Header
+在themes/Hexo-CleanBlog目录下，同样需要修改一个_config.yml文件
+```yml
 menu:
   Home: /
   Archives: /archives
-  Github:
-    url: https://github.com/klugjo/hexo-theme-clean-blog
-    icon: github
-```
+  GitHub:
+    url: https://github.com/CodingCrush/Hexo-CleanBlog
+  # 增加About页面
+  About: /about
 
-The object key is the label and the value is the path, or you can use a icon (font awesome) like menu item.
-
-### Top Left Label
-
-The top left label is configured in the theme's `_config.yml`. When clicked it will lead to the Home Page.
-
-```
-# Title on top left of menu. Leave empty to use main blog title
-menu_title: Configurable Title
-```
-
-### Home Page cover image
-
-The Home Page cover is configured in the theme's `_config.yml`. It will be the same for all index type pages.
-
-```
-# URL of the Home page image
-index_cover: /img/home-bg.jpg
-```
-
-### Default post title
-
-The default post title (used when no title is specified) is configured in the theme's `_config.yml`.
-
-```
-# Default post title
-default_post_title: Untitled
-```
-
-### Comments
-
-The comments provider is specified in the theme's `_config.yml`. If you specify both a `disqus_shortname` and a `facebook.appid` there will be 2 sets of comment per post. So choose one.
-
-```
-# Comments. Choose one by filling up the information
 comments:
   # Disqus comments
-  disqus_shortname: klugjotest
-  # Facebook comments
-  facebook:
-    appid: 123456789012345
-    comment_count: 5
-    comment_colorscheme: light
-```
+  disqus_shortname: codingcrush
 
-You can too hide the comment in the posts front-matter:
-
-```
-comment: false
----
-```
-
-### Google Analytics
-
-The Google Analytics Tracking ID is configured in the theme's `_config.yml`.
-
-```
 # Google Analytics Tracking ID
-google_analytics:
+https://www.google.com/analytics/注册后获取ID填上
+
+mailto: codingcrush@163.com
+# 增加rss订阅文件
+rss: "/atom.xml
+```
+由于多说即将停止服务，还是继续用disqus吧，虽然不翻墙就看不了评论框
+
+写博客时，使用markdown写作，生成的.md或者.markdown文件放在_posts目录下。
+每篇文章首部要使用yml格式来写明这篇文章的简单介绍，格式如下：
+
+## 使用markdown格式写作
+新建博客：
+```bash
+hexo new post 'hello,world!'
 ```
 
-### Addthis
-
-The Addthis ID is configured in the theme's `_config.yml`.
-
-```
-# Addthis ID
-addthis:
-```
-
-### Social Account
-
-Setup the links to your social pages in the theme's `_config.yml`. Links are in the footer.
-
-```
-# Social Accounts
-twitter_url:
-facebook_url:
-github_url: https://github.com/klugjo/hexo-theme-clean-blog
-linkedin_url:
-mailto:
-```
-
-### Author
-
-The post's author is specified in the posts front-matter:
-
-```
-author: Klug Jo
+```bash
+---
+layout:     post
+title:      使用Hexo+Hexo-CleanBlog迁移Jekyll博客
+tags:       [Hexo, GitHub,Jekyll, FrontEnd]
+date:       2017-3-24 12:00:00
+author:     "CodingCrush"
 ---
 ```
 
-### Post's Cover Image
+## Hexo常用命令：
+```bash
+hexo help #查看帮助
+hexo init #初始化一个目录
+hexo new "article" #新建文章
+hexo new page "title" #新建页面
+hexo generate #生成网页，可以在 public 目录查看整个网站的文件
+hexo server #本地预览，'Ctrl+C'关闭
+hexo deploy #部署.deploy目录
+hexo clean #清除缓存，强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹
 
-By default, posts will use the home page cover image. You can specify a custom cover in the front-matter:
-
+hexo n == hexo new
+hexo g == hexo generate
+hexo s == hexo server
+hexo d == hexo deploy
 ```
-title: Excerpts
-date: 2013-12-25 00:23:23
-tags: ["Excertps"]
-cover: /assets/contact-bg.jpg
----
+## Hexo部署
+```bash
+hexo generate
+hexo deploy
 ```
-
-### Post's Share Cover Image
-
-You can specify a custom cover to share yours posts in social medias:
-
-```
-share_cover: /assets/contact-bg.jpg
----
-```
-
-### Post's Excerpt
-
-This theme does not support traditional excerpts. To show excerpts on the index page, use `subtitle` in the front-matter:
-
-```
-title: Excerpts
-date: 2013-12-25 00:23:23
-tags: ["Excertps"]
-subtitle: Standard Excerpts are not supported in Clean Blog but you can use subtitles in the front matter to display text in the index.
----
-
-```
-
-
-## Creator
-
-This theme was created by [Blackrock Digital](https://github.com/BlackrockDigital) and adapted for Hexo by [Jonathan Klughertz](http://www.codeblocq.com/).
-
-## License
-
-MIT
