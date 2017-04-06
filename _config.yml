@@ -13,16 +13,19 @@ default_post_title: Untitled
 # Comments. Choose one by filling up the information
 comments:
   # Disqus comments
-  disqus_shortname: codingcrush
+  disqus_shortname:
   # Facebook comments
   facebook:
     appid:
     comment_count: 5
     comment_colorscheme: light
+  # Netease comments
+  netease:
+    productKey:
 
 
 # Google Analytics Tracking ID
-google_analytics: UA-96094518-1
+google_analytics:
 
 # Addthis ID
 addthis:

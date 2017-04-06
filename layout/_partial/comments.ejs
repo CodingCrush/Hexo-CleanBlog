@@ -22,3 +22,19 @@
 
     <div class="fb-comments" data-href="<%= url %>" data-num-posts="<%= theme.comments.facebook.comment_count %>" data-width="100%" data-colorscheme="<%= theme.comments.facebook.comment_colorscheme %>"></div>
 <% } %>
+
+<% if(page.comments && theme.comments && theme.comments.netease.productKey) { %>
+    <hr />
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    <script>
+        var cloudTieConfig = {
+          url: document.location.href,
+          sourceId: "",
+          productKey: "<%= theme.comments.netease.productKey %>",
+          target: "cloud-tie-wrapper"
+        };
+        var yunManualLoad = true;
+        Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+    </script>
+<% } %>

@@ -23,8 +23,8 @@
 
                 <!-- Tags -->
                 <% if (item.tags && item.tags.length) { %>
-                  <% item.tags.each(function(tag){ %>
-                      <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag" class="post-tag">
+                  <% item.tags.forEach(function(tag){ %>
+                        <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag" class="post-tag">
                         <%- tag.name %>
                       </a>
                   <% }); %>
