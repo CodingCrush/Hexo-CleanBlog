@@ -1,4 +1,4 @@
-## Hexo-CleanBlog
+##  Hexo-CleanBlog
 Hexo-CleanBlog是花了一天从这个主题[CleanBlog](http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/)修改而来，去除了浪费流量的图片，添加了标签、关于我等功能，以尽可能的保持简约。
 
 ## [hexo安装](https://hexo.io/)
